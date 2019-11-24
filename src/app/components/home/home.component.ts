@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { LocationStrategy, PlatformLocation, Location } from '@angular/common';
+
+declare var $:any;
 
 @Component({
   selector: 'app-home',
@@ -6,10 +9,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  location: Location;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(location: Location) { 
+    this.location = location;
   }
 
+  ngOnInit() {
+    $.getScript('../../../assets/js/material-dashboard.js');
+    $.getScript('../../../assets/js/initMenu.js');
+  }
+  
+  isMaps(path) {
+    var title = this.location.prepareExternalUrl(this.location.path());
+    title = title.slice(1);
+    if(path == title) {
+      return false;
+    } else {
+      return true;
+    }
+  }
 }

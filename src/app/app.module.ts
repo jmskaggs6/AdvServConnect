@@ -6,12 +6,18 @@ import { AppComponent } from './app.component';
 import { EventsComponent } from './components/events/events.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './components/home/home.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EventsComponent,
-    HomeComponent
+    HomeComponent,
+    SidebarComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
