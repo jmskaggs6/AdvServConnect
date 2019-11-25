@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HomeRoutingModule } from './home.routing';
 
+import { ComponentsModule } from '../../components/components.module';
 import { HomeComponent } from './home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
@@ -11,7 +12,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CommonModule,
     RouterModule,
     RouterModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    ComponentsModule
   ],
   declarations: [
     HomeComponent, 
